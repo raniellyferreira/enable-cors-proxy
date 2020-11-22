@@ -14,7 +14,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url, err := url.Parse(r.URL.Query().Get("u"))
+	url, err := url.Parse(targetUrl)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
